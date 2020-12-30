@@ -98,7 +98,7 @@ namespace Webcam
             var bitmapData = buffer.ToArray();
             // 'Pixel buffer size doesn't match size required by this image format.'
             // Remove 54 byte header
-            var headerLessData = RedGreenSwap(bitmapData.Skip(54).ToArray());
+            var headerLessData = RedBlueSwap(bitmapData.Skip(54).ToArray());
             var imageData = ImageData.FromArray(headerLessData, ImagePixelFormat.Rgb24, frame.Size);
             _videoOutput.Video.AddFrame(imageData);
         }
@@ -108,7 +108,7 @@ namespace Webcam
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        private static byte[] RedGreenSwap(byte[] input)
+        private static byte[] RedBlueSwap(byte[] input)
         {
             var output = new byte[input.Length];
             for (var i = 0; i < input.Length - 3; i += 3)
