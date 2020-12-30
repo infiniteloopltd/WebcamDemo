@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "DirectShowLib/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/DirectShowLib.dll": {}
+        },
+        "runtime": {
+          "lib/DirectShowLib.dll": {}
+        }
+      },
       "Emgu.CV/4.4.0.4099": {
         "type": "package",
         "dependencies": {
@@ -23,6 +32,27 @@
         },
         "build": {
           "build/Emgu.CV.runtime.windows.targets": {}
+        }
+      },
+      "FFMediaToolkit/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "FFmpeg.AutoGen": "4.3.0.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.2/FFMediaToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.2/FFMediaToolkit.dll": {}
+        }
+      },
+      "FFmpeg.AutoGen/4.3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/FFmpeg.AutoGen.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/FFmpeg.AutoGen.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.1": {
@@ -254,6 +284,19 @@
     }
   },
   "libraries": {
+    "DirectShowLib/1.0.0": {
+      "sha512": "oWwOk9Lj8JIMWPsfx8bUbJ/uWhHlRKpMaU5oVf8Kl9SLMhmrnr0kXg0ebDv3oOmKxZ/D1yrmw+x7UGmgMqUxFA==",
+      "type": "package",
+      "path": "directshowlib/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "directshowlib.1.0.0.nupkg.sha512",
+        "directshowlib.nuspec",
+        "lib/DirectShowLib.dll",
+        "lib/DirectShowLib.pdb"
+      ]
+    },
     "Emgu.CV/4.4.0.4099": {
       "sha512": "aEZQiPobTIkd5oG2q+qgO/bAsocnplq8jU70e/PqlkBAMfshlwFk6c/IOkoEAtx4PANvdx72fOE0vhe+frLsnA==",
       "type": "package",
@@ -300,6 +343,45 @@
         "emgu.cv.runtime.windows.4.4.0.4099.nupkg.sha512",
         "emgu.cv.runtime.windows.nuspec",
         "icon.png"
+      ]
+    },
+    "FFMediaToolkit/3.3.0": {
+      "sha512": "66PkjFAA86mBP8PBuj20xi6zk8irzMY+ualg6/jKEZ93qAyPTgwJnwBSsAwkCE5O0Aq2GUQRBjJ3gyY4QaoO5A==",
+      "type": "package",
+      "path": "ffmediatoolkit/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ffmediatoolkit.3.3.0.nupkg.sha512",
+        "ffmediatoolkit.nuspec",
+        "lib/netcoreapp2.2/FFMediaToolkit.dll",
+        "lib/netcoreapp2.2/FFMediaToolkit.pdb",
+        "lib/netcoreapp2.2/FFMediaToolkit.xml",
+        "lib/netstandard2.0/FFMediaToolkit.dll",
+        "lib/netstandard2.0/FFMediaToolkit.pdb",
+        "lib/netstandard2.0/FFMediaToolkit.xml"
+      ]
+    },
+    "FFmpeg.AutoGen/4.3.0.1": {
+      "sha512": "koM5zqdZZHGAVK0faNZgi9HjCrHrMRGaTqmTEbvMSx3YeNIZBd62JQMZjAE0HlQ3NsLnRvXigVJtwRidOnosUw==",
+      "type": "package",
+      "path": "ffmpeg.autogen/4.3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "ffmpeg.autogen.4.3.0.1.nupkg.sha512",
+        "ffmpeg.autogen.nuspec",
+        "lib/net40/FFmpeg.AutoGen.dll",
+        "lib/net40/FFmpeg.AutoGen.xml",
+        "lib/net45/FFmpeg.AutoGen.dll",
+        "lib/net45/FFmpeg.AutoGen.xml",
+        "lib/net472/FFmpeg.AutoGen.dll",
+        "lib/net472/FFmpeg.AutoGen.xml",
+        "lib/netstandard2.0/FFmpeg.AutoGen.dll",
+        "lib/netstandard2.0/FFmpeg.AutoGen.xml",
+        "lib/netstandard2.1/FFmpeg.AutoGen.dll",
+        "lib/netstandard2.1/FFmpeg.AutoGen.xml"
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.1": {
@@ -1325,8 +1407,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "DirectShowLib >= 1.0.0",
       "Emgu.CV >= 4.4.0.4099",
-      "Emgu.CV.runtime.windows >= 4.4.0.4099"
+      "Emgu.CV.runtime.windows >= 4.4.0.4099",
+      "FFMediaToolkit >= 3.3.0"
     ]
   },
   "packageFolders": {
@@ -1368,6 +1452,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "DirectShowLib": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "Emgu.CV": {
             "target": "Package",
             "version": "[4.4.0.4099, )"
@@ -1375,6 +1463,10 @@
           "Emgu.CV.runtime.windows": {
             "target": "Package",
             "version": "[4.4.0.4099, )"
+          },
+          "FFMediaToolkit": {
+            "target": "Package",
+            "version": "[3.3.0, )"
           }
         },
         "imports": [
@@ -1395,5 +1487,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DirectShowLib 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "DirectShowLib",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

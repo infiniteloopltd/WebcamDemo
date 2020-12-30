@@ -40,6 +40,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "DirectShowLib": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Emgu.CV": {
               "target": "Package",
               "version": "[4.4.0.4099, )"
@@ -47,6 +51,10 @@
             "Emgu.CV.runtime.windows": {
               "target": "Package",
               "version": "[4.4.0.4099, )"
+            },
+            "FFMediaToolkit": {
+              "target": "Package",
+              "version": "[3.3.0, )"
             }
           },
           "imports": [

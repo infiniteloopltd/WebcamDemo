@@ -30,3 +30,6 @@ C:\Users\fiach\source\repos\Webcam\bin\Debug\netcoreapp3.1\x86\msvcp140_2.dll
 C:\Users\fiach\source\repos\Webcam\bin\Debug\netcoreapp3.1\x86\msvcp140_codecvt_ids.dll
 C:\Users\fiach\source\repos\Webcam\bin\Debug\netcoreapp3.1\x86\opencv_videoio_ffmpeg440.dll
 C:\Users\fiach\source\repos\Webcam\bin\Debug\netcoreapp3.1\x86\vcruntime140.dll
+C:\Users\fiach\source\repos\Webcam\bin\Debug\netcoreapp3.1\FFMediaToolkit.dll
+C:\Users\fiach\source\repos\Webcam\bin\Debug\netcoreapp3.1\FFmpeg.AutoGen.dll
+C:\Users\fiach\source\repos\Webcam\bin\Debug\netcoreapp3.1\DirectShowLib.dll

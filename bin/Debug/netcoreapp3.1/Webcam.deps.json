@@ -8,11 +8,21 @@
     ".NETCoreApp,Version=v3.1": {
       "Webcam/1.0.0": {
         "dependencies": {
+          "DirectShowLib": "1.0.0",
           "Emgu.CV": "4.4.0.4099",
-          "Emgu.CV.runtime.windows": "4.4.0.4099"
+          "Emgu.CV.runtime.windows": "4.4.0.4099",
+          "FFMediaToolkit": "3.3.0"
         },
         "runtime": {
           "Webcam.dll": {}
+        }
+      },
+      "DirectShowLib/1.0.0": {
+        "runtime": {
+          "lib/DirectShowLib.dll": {
+            "assemblyVersion": "2.1.0.1599",
+            "fileVersion": "2.1.0.1599"
+          }
         }
       },
       "Emgu.CV/4.4.0.4099": {
@@ -31,6 +41,25 @@
       "Emgu.CV.runtime.windows/4.4.0.4099": {
         "dependencies": {
           "Emgu.CV": "4.4.0.4099"
+        }
+      },
+      "FFMediaToolkit/3.3.0": {
+        "dependencies": {
+          "FFmpeg.AutoGen": "4.3.0.1"
+        },
+        "runtime": {
+          "lib/netcoreapp2.2/FFMediaToolkit.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        }
+      },
+      "FFmpeg.AutoGen/4.3.0.1": {
+        "runtime": {
+          "lib/netstandard2.1/FFmpeg.AutoGen.dll": {
+            "assemblyVersion": "4.3.0.1",
+            "fileVersion": "4.3.0.1"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.1": {},
@@ -165,6 +194,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "DirectShowLib/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oWwOk9Lj8JIMWPsfx8bUbJ/uWhHlRKpMaU5oVf8Kl9SLMhmrnr0kXg0ebDv3oOmKxZ/D1yrmw+x7UGmgMqUxFA==",
+      "path": "directshowlib/1.0.0",
+      "hashPath": "directshowlib.1.0.0.nupkg.sha512"
+    },
     "Emgu.CV/4.4.0.4099": {
       "type": "package",
       "serviceable": true,
@@ -178,6 +214,20 @@
       "sha512": "sha512-KHcHWrnUJinUxvjMXFrbiITg/YXycZMXnaXX0KC011oEiQbJWQV6vXNuZSVhtkWaW9tQoErjc2irfvGMEwqG9g==",
       "path": "emgu.cv.runtime.windows/4.4.0.4099",
       "hashPath": "emgu.cv.runtime.windows.4.4.0.4099.nupkg.sha512"
+    },
+    "FFMediaToolkit/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-66PkjFAA86mBP8PBuj20xi6zk8irzMY+ualg6/jKEZ93qAyPTgwJnwBSsAwkCE5O0Aq2GUQRBjJ3gyY4QaoO5A==",
+      "path": "ffmediatoolkit/3.3.0",
+      "hashPath": "ffmediatoolkit.3.3.0.nupkg.sha512"
+    },
+    "FFmpeg.AutoGen/4.3.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-koM5zqdZZHGAVK0faNZgi9HjCrHrMRGaTqmTEbvMSx3YeNIZBd62JQMZjAE0HlQ3NsLnRvXigVJtwRidOnosUw==",
+      "path": "ffmpeg.autogen/4.3.0.1",
+      "hashPath": "ffmpeg.autogen.4.3.0.1.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.1": {
       "type": "package",

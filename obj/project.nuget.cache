@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "7TMHt2l9MdeSMweVtJEdyRvcciTdcz6QpeAkQ9lOz0b/1mWDPVDMpD8p+qiJqyaPxtALnzIp6VDFxovsSuPIuQ==",
+  "dgSpecHash": "TKucjQ3torZrMJyFGNYBZl+Fbj7PHvAeGBs3YLDDbLpYp/fw+RhJfZAkY5E99NlhhMobrOdFA902J7ux+0IZTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\fiach\\source\\repos\\Webcam\\Webcam.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\fiach\\.nuget\\packages\\directshowlib\\1.0.0\\directshowlib.1.0.0.nupkg.sha512",
     "C:\\Users\\fiach\\.nuget\\packages\\emgu.cv\\4.4.0.4099\\emgu.cv.4.4.0.4099.nupkg.sha512",
     "C:\\Users\\fiach\\.nuget\\packages\\emgu.cv.runtime.windows\\4.4.0.4099\\emgu.cv.runtime.windows.4.4.0.4099.nupkg.sha512",
+    "C:\\Users\\fiach\\.nuget\\packages\\ffmediatoolkit\\3.3.0\\ffmediatoolkit.3.3.0.nupkg.sha512",
+    "C:\\Users\\fiach\\.nuget\\packages\\ffmpeg.autogen\\4.3.0.1\\ffmpeg.autogen.4.3.0.1.nupkg.sha512",
     "C:\\Users\\fiach\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\fiach\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\fiach\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
@@ -25,5 +28,16 @@
     "C:\\Users\\fiach\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\fiach\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DirectShowLib 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "DirectShowLib",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
